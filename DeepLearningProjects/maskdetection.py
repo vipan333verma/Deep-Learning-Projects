@@ -6,7 +6,7 @@ from keras_preprocessing import image
 categories = ['with_Mask','without_Mask']
 
 data =[]
-withMaskPath ="D:\pyProjects\DeepLearningProjects\maskDetection\\training"
+withMaskPath ="path of training images"
 for cat in categories:
     path = os.path.join(withMaskPath,cat)
     label = categories.index(cat)
@@ -119,15 +119,7 @@ while True:
         break
 
 cap.release()
-#cv2.destroyWindow()
 
-
-
-sample ="D:\pyProjects\DeepLearningProjects\maskDetection\\training\with_Mask\with_Mask.d8d77f14-99d5-11eb-b6d2-002b67c616aa.jpg"
-testt = cv2.imread(sample)
-testt =cv2.resize(testt,(224,224))
-
-print(detect_mask(testt))
 
 
 
